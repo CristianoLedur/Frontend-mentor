@@ -1,0 +1,166 @@
+:root {
+    --azul-claro: hsl(225, 100%, 94%);
+    --azul-brilhante: hsl(245, 75%, 52%);
+    --azul-bebe: hsl(225, 100%, 98%);
+    --azul-desaturado: hsl(224, 23%, 55%);
+    --azul-escuro: hsl(223, 47%, 23%);
+
+    /* - Mobile: 375px */
+
+    /* - Desktop: 1440px */
+
+}
+
+body, html {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    background: var(--azul-claro);
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.pattern__background-desk {
+    display: none;
+}
+
+.pattern__background-mobile {
+    display: none;
+}
+.content {
+    background: #fff url('./images/illustration-hero.svg')  no-repeat;
+    background-size: contain;
+
+    border-radius: 20px;
+
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    
+    width: 320px;
+    height: 500px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100%;
+}
+
+.card__title {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--azul-escuro);
+    
+    /* margin-bottom: .1rem; */
+}
+
+.card__description {
+    text-align: center;
+    font-weight: 500;
+    color: var(--azul-desaturado);
+    font-size: 1rem;
+    line-height: 1.2rem;
+
+    padding: 6%;
+}
+
+.card__plans {
+    background: var(--azul-bebe);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 85%;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.card__plans-description {
+    display: flex;
+    flex-direction: column;
+
+    width: 120px;
+}
+
+.card__plans-title {
+    font-weight: 900;
+    margin-bottom: .3rem;
+    color: var(--azul-escuro);
+}
+
+.card__plans-price {
+    font-weight: 500;
+    color: var(--azul-desaturado);
+}
+
+.card__plans-link {
+    cursor: pointer;
+}
+
+.card__plans-link:hover {
+    opacity: 80%;
+}
+
+.card__bottom__pay {
+    border-radius: 8px;
+    height: 40px;
+    width: 85%;
+    margin: 1.2rem auto .2rem auto;
+    background: var(--azul-brilhante);
+    color: var(--azul-bebe);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border: none;
+}
+.card__bottom__pay:hover {
+    opacity: 80%;
+}
+
+.card__bottom__cancel {
+    border-radius: 8px;
+    height: 40px;
+    width: 85%;
+    margin: 0 auto 1rem auto;
+    
+    color: var(--azul-desaturado);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    border: none;
+    background: #fff;
+}
+.card__bottom__cancel:hover {
+    color:var(--azul-escuro)
+}
+
+
+@media (max-width:375px) {
+    .pattern__background-mobile {
+        display: inline;
+        
+    }
+}
+
+@media (min-width:376px) {
+    .pattern__background-desk {
+        display: inline;
+        position: absolute;
+        top: -20%;
+    }
+}
